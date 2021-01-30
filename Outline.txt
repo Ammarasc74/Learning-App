@@ -1,0 +1,123 @@
+-Outline- 
+        screen 1 : [Tutorial screen 4] :
+            - Start learning now => Home
+            - Sign in => Signin Api
+
+        screen 2 : [Choose avatar or upload profile image] : 
+            - create avatar table on database
+            - create profile photo table on database
+
+        screen 3 : [sign up] : 
+            - signup => {
+                Full name,
+                email,
+                phone,
+                school,
+                password
+            }
+            create table on database for user and user Api
+
+        screen 4 : [sign in] : 
+            - signin => {
+                email,
+                password
+            }
+
+        screen 5 : [forget password] : 
+            - reset password => {
+                email
+            }
+
+        screen 6 : [verfiy email] : 
+            - verfiy email => {
+                code mail
+            }
+
+        screen 7 : [create new password] : 
+            - new password => {
+                password,
+                confirm password
+            }
+
+        screen 8 : [Home] : 
+            - home page need => {
+                personal data info,
+                user progress
+            }
+
+        screen 9 : [setting] : 
+            - personal info & edit profile need => {
+            Patch Api for {
+                Full name,
+                email,
+                phone,
+                school,
+                password,
+                language
+            }
+                pip screen : [change password] : 
+                    - change password  => {
+                        current password,
+                        new password
+            }
+                pip screen : [change avatar] : 
+                    - change avatar  => {
+                        Choose avatar from database
+            }
+        }
+
+        screen 10 : [Leaderboard] : 
+            - rank user who signining in 
+            - retern all users rank
+
+        screen 11 : [saved video] : 
+            return saved video in this screen
+
+        screen 12 : [Contact us] : 
+            - Contact us data => {
+                email,
+                phone,
+                site,
+                another phone
+            }
+
+        screen 13 : [Learn page] : 
+            - Subjects => {
+                create table on database for Subjects,
+                create api for Subjects,
+                retern all Subjects in Learn page
+            }
+
+            Subjects on database it contains => {
+                semesters it contains {
+                        "lessons" it contains:
+                        "parts" it contains {
+                                videos,
+                                pdfs,
+                                tests
+                        }
+                    }
+                Subject sections : 
+                    such as : {
+                        Reading,
+                        writting,
+                        listening,
+                        speaking
+                    }
+                    every sections it contains:
+                        "levels" it contains => {
+                            "lessons" it contains {
+                                        videos,
+                                        pdfs,
+                                        tests
+                                }
+            }
+
+
+
+
+
+
+
+
+
