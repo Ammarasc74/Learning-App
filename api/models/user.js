@@ -6,6 +6,10 @@ const userSchema = mongoose.Schema ({
         type: 'string',
         requried: true,
     },
+    userName: {
+        type: 'string',
+        requried: true,
+    },
     email: {
         type: 'String',
         requried: true,

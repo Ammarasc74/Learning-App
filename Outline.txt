@@ -3,11 +3,8 @@
             - Start learning now => Home
             - Sign in => Signin Api
 
-        screen 2 : [Choose avatar or upload profile image] : 
-            - create avatar table on database
-            - create profile photo table on database
-
-        screen 3 : [sign up] : 
+        
+        screen 2 : [sign up] : 
             - signup => {
                 Full name,
                 email,
