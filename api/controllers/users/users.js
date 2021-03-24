@@ -5,16 +5,16 @@ const User = require('../../models/user');
 
 exports.get_all_users = (req, res, next) => {
     User.find()
-    .select("firstName  email  password _id")
+    .select("fullName school email  password _id")
     .exec()
     .then( docs  => {
         const response = {
             count: docs.length,
             users: docs.map( doc =>{
                 return {
-                    firstName: doc.firstName,
-                    lastName: doc.lastName,
+                    fullName: doc.firstName,
                     email: doc.email,
+                    school: doc.school,
                     password: doc.password,
                     _id: doc._id,
                     request: {
