@@ -4,6 +4,11 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
+// import routes 
+
+const userRoutes = require('./api/routes/user');
+
+
 
 // connect to DATABASE
 
