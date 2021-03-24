@@ -52,16 +52,12 @@
                 password,
                 language
             }
-                pip screen : [change password] : 
+                screen : [change password] : 
                     - change password  => {
                         current password,
                         new password
             }
-                pip screen : [change avatar] : 
-                    - change avatar  => {
-                        Choose avatar from database
-            }
-        }
+            
 
         screen 10 : [Leaderboard] : 
             - rank user who signining in 
@@ -75,7 +71,6 @@
                 email,
                 phone,
                 site,
-                another phone
             }
 
         screen 13 : [Learn page] : 
