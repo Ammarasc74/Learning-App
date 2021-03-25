@@ -15,6 +15,11 @@ const userSchema = mongoose.Schema ({
         requried: true,
         uniqe: true
     },
+    phoneNumber: {
+        type: 'String',
+        requried: true,
+        uniqe: true
+    },
     school: {
         type: 'String',
         requried: true,

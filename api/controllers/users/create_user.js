@@ -30,7 +30,7 @@ exports.user_signup = (req, res, next) => {
                         user.save()
                         .then(result =>{
                             res.status(201).json({
-                                message: "User Created"
+                                message: "Great! create new user succesfully"
                             });
                         })
                     }
