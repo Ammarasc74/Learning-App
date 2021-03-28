@@ -1,12 +1,10 @@
 -Outline- 
-        screen 1 : [Tutorial screen 4] :
-            - Start learning now => Home
-            - Sign in => Signin Api
-
+        [Tutorial screen 4] :
+            - Sign in => Signin Api   // DONE
         
-        screen 2 : [sign up] : 
+        [sign up] : // DONE
             - signup => {
-                Full name,
+                Full name, 
                 email,
                 phone,
                 school,
@@ -14,109 +12,70 @@
             }
             create table on database for user and user Api
 
-        screen 4 : [sign in] : 
+        [sign in] :    // DONE
             - signin => {
                 email,
                 password
             }
-
-        screen 5 : [forget password] : 
-            - reset password => {
-                email
-            }
-
-        screen 6 : [verfiy email] : 
+        
+        [verfiy email] : // PENDING
             - verfiy email => {
                 code mail
             }
 
-        screen 7 : [create new password] : 
+
+        [forget password] : // PENDING
+            - reset password => {
+                email
+        [create new password] : 
             - new password => {
-                password,
+                last password,
+                new password,
                 confirm password
             }
-
-        screen 8 : [Home] : 
-            - home page need => {
-                personal data info,
-                user progress
             }
 
-        screen 9 : [setting] : 
+        [Home] : 
+            - home page need => {
+                personal data info, // DONE
+                user progress // PENDING
+            }
+
+        [setting] :  // DONE
             - personal info & edit profile need => {
             Patch Api for {
                 Full name,
                 email,
                 phone,
                 school,
-                password,
-                language
-            }
-                screen : [change password] : 
+                [change password] : // PENDING
                     - change password  => {
                         current password,
                         new password
+            } 
             }
+        
             
 
-        screen 10 : [Leaderboard] : 
+        [Leaderboard] : // PENDING
             - rank user who signining in 
             - retern all users rank
 
-        screen 11 : [saved video] : 
+        [saved video] : // PENDING
             return saved video in this screen
 
-        screen 12 : [Contact us] : 
+        [Contact us] : 
             - Contact us data => {
                 email,
                 phone,
                 site,
             }
 
-        screen 13 : [Learn page] : 
+        [Learn page] : 
             - Subjects => {
                 create table on database for Subjects,
-                create api for Subjects,
-                retern all Subjects in Learn page
+                create api for Subjects, POST
+                retern all Subjects in Learn page GET 
             }
 
-            Subjects on database it contains => {
-                semesters it contains {
-                        "lessons" it contains:
-                        "parts" it contains {
-                                videos,
-                                pdfs,
-                                tests
-                        }
-                    }
-                Subject sections : 
-                    such as : {
-                        Reading,
-                        writting,
-                        listening,
-                        speaking
-                    }
-                    every sections it contains:
-                        "levels" it contains => {
-                            "lessons" it contains {
-                                        videos,
-                                        pdfs,
-                                        tests
-                                }
-            }
-
-
-9
-
-
-
-
-
-
-{
-    "fullName": "ammmmar",
-    "userName": "yasser",
-    "email": "ammarttest@gmail.com",
-    "school": "azhar",
-    "password": "1771999A"
-}
+            waiting Learn route

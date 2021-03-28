@@ -24,6 +24,7 @@ exports.user_signup = (req, res, next) => {
                             fullName: req.body.fullName,
                             userName: req.body.userName,
                             email: req.body.email,
+                            phoneNumber: req.body.phoneNumber,
                             school: req.body.school,
                             password: hash
                         });

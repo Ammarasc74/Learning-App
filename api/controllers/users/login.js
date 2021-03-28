@@ -1,17 +1,17 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+   
 
-
-const User = require('../../models/user');
-
-
+const User = require('../../models/user');   
+  
+  
 exports.user_login = (req, res, next) => {
-    
+      
     User
-    .find({userName: req.body.userName})
-    .exec()
-    .then(user => {
+    .find({userName: req.body.userName})    
+    .exec() 
+    .then(user => {     
         if(user.length < 1) {
             return res.status(401).json({
                 message: "Auth failed"
