@@ -45,6 +45,7 @@ app.use((req,res,next)=>{
 // handling req for routes
 
 app.use('/user', userRoutes)
+// app.use('/user', userRoutes)
 
 
 //  error handling

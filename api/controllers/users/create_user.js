@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const User = require('../../models/user');
+const User = require('../../models/users/user');
 
 exports.user_signup = (req, res, next) => {
     User

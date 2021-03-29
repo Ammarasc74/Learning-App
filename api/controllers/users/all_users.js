@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const User = require('../../models/user');
-const user = require('../../models/user');
+const User = require('../../models/users/user');
+const user = require('../../models/users/user');
 
 exports.get_all_users = (req, res, next) => {
     User.find()
