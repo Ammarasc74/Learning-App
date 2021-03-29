@@ -6,7 +6,9 @@ const mongoose = require('mongoose');
 
 // import routes 
 
-const userRoutes = require('./api/routes/user');
+const userRoutes = require('./api/controllers/users/index');
+const subjectRoutes = require('./api/controllers/subjects/index');
+const semesterRoutes = require('./api/controllers/semesters/index');
 
 
 
@@ -45,18 +47,19 @@ app.use((req,res,next)=>{
 // handling req for routes
 
 app.use('/user', userRoutes)
-// app.use('/user', userRoutes)
+app.use('/subject', subjectRoutes)
+app.use('/semester', semesterRoutes)
 
 
 //  error handling
 
-app.use((req,res,next)=>{
+app.use((req, res, next) => {
     const error = new Error('Not Found');
     error.status = 404;
     next(error);
 });
 
-app.use((error,req,res,next) => {
+app.use((error, req, res, next) => {
     res.status(error.status || 500);
     res.json({
         error: {
