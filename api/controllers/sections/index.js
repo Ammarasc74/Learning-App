@@ -7,7 +7,7 @@ const getAllSectionsController = require('./sections');
 
 
 
-router.get('/sections', getAllSectionsController.Section_get_All_Sections);
+router.get('/sections', getAllSectionsController.section_get_All);
 
 router.post('/addsection', createdSectionController.section_add_section);
 

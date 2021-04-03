@@ -2,10 +2,6 @@ const { Mongoose } = require("mongoose");
 
 
 const Semester = require('../../models/learn/semester');
-const Subject = require('../../models/learn/subject');
-
-
-
 
 exports.semester_get_All_semesters = (req, res, next) => {
     Semester
