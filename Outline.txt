@@ -73,7 +73,7 @@
 
             Subjects { // DONE
             => semestsers   // DONE
-                => sections {
+                => sections {   // DONE
                     => lessons {
                         => parts {
                             => (pdf tests video)
