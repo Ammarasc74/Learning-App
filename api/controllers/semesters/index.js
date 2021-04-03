@@ -1,5 +1,4 @@
 const express = require('express');
-const { route } = require('../subjects/index');
 const router = express.Router();
 
 

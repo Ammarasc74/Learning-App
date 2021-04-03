@@ -1,7 +1,4 @@
--Outline- 
-        [Tutorial screen 4] :
-            - Sign in => Signin Api   // DONE
-        
+-Outline-
         [sign up] : // DONE
             - signup => {
                 Full name, 
@@ -10,8 +7,6 @@
                 school,
                 password
             }
-            create table on database for user and user Api
-
         [sign in] :    // DONE
             - signin => {
                 email,
@@ -23,16 +18,16 @@
                 code mail
             }
 
-
         [forget password] : // PENDING
             - reset password => {
                 email
-        [create new password] : 
+            }
+
+        [create new password] :  // PENDING
             - new password => {
                 last password,
                 new password,
                 confirm password
-            }
             }
 
         [Home] : 
@@ -52,10 +47,8 @@
                     - change password  => {
                         current password,
                         new password
-            } 
-            }
-        
-            
+                    } 
+                }
 
         [Leaderboard] : // PENDING
             - rank user who signining in 
@@ -78,4 +71,10 @@
                 retern all Subjects in Learn page GET 
             }
 
-            waiting Learn route
+            Subjects { // DONE
+            => semestsers   // DONE
+                => sections {
+                    => lessons {
+                        => parts {
+                            => (pdf tests video)
+                    
