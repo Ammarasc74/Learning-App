@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../../models/users/user');
 
 
-exports.user_change_password = (req,res,next) =>{
+exports.user_change_password = (req,res,next) => {
     const id = req.params.userId;
     const updatePass = {};
     for (const password of req.body) {
