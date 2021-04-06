@@ -9,6 +9,10 @@ const mongoose = require('mongoose');
 const userRoutes = require('./api/controllers/users/index');
 const subjectRoutes = require('./api/controllers/subjects/index');
 const semesterRoutes = require('./api/controllers/semesters/index');
+const sectionRoutes = require('./api/controllers/sections/index');
+const questionRoutes = require('./api/controllers/questions/index');
+const lessonRoutes = require('./api/controllers/lessons/index');
+const pdfRoutes = require('./api/controllers/pdf/index');
 
 
 
@@ -22,9 +26,12 @@ mongoose.connect('mongodb+srv://Ammarasc74:'+ process.env.MONGO_ATLAS_PW +
     useFindAndModify: false,
   };
   mongoose.Promise = global.Promise;
-//   const db = mongoose.connection;
-//   db.on("error", () => console.log("connection error"));
-//   db.once("open", () => console.log("connected successfuly"));
+  const db = mongoose.connection;
+  db.on("error", () => console.log("disconnected"));
+  db.once("open", () => console.log("connected"));
+
+
+
 
 app.use(morgan('dev'));
 // app.use('/uploads', express.static('uploads'));
@@ -32,7 +39,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json()); 
 
 
-app.use((req,res,next)=>{
+app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin","*");
     res.header(
         "Access-Control-Allow-Headers",
@@ -49,6 +56,10 @@ app.use((req,res,next)=>{
 app.use('/user', userRoutes)
 app.use('/subject', subjectRoutes)
 app.use('/semester', semesterRoutes)
+app.use('/section', sectionRoutes)
+app.use('/question', questionRoutes)
+app.use('/lesson', lessonRoutes)
+app.use('/pdf', pdfRoutes)
 
 
 //  error handling

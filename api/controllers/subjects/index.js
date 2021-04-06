@@ -3,8 +3,6 @@ const router = express.Router();
 const checkAuth = require('../../middleware/check-auth');
 
 
-const Subject = require('../../models/learn/subject');
-
 
 const createSubjectController = require('./create_subject');
 const getAllSubjectsController = require('./subjects');
@@ -15,7 +13,7 @@ router.get('/subjects', getAllSubjectsController.subject_get_All);
 
 router.get('/:subjectId', getSubjectDetailController.subject_get_detail);
 
-router.post('/subjects', checkAuth, createSubjectController.subject_create_subject);
+router.post('/subjects', createSubjectController.subject_create_subject);
 
 
 

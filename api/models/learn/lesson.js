@@ -12,16 +12,16 @@ const lessonSchema = mongoose.Schema ({
         required: true
     },
     pdf: {
-        type: 'string',
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'PDF',
         required: true
     },
     test: {
-        // qus , answers
-
-    },
-    video: {
-
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Test',
+        required: true
     }
+    // videos
 });
 
 module.exports = mongoose.model('Lesson', lessonSchema);

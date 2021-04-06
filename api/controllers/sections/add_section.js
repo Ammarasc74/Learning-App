@@ -11,7 +11,7 @@ exports.section_add_section = (req, res, next) => {
     .then( semester => { 
             if (!semester) {
                 return res.status(404).json({
-                    message: " semester not found" 
+                    message: "semester not found" 
                 });
             }
             const section = new Section({  

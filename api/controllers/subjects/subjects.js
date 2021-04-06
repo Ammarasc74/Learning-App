@@ -1,6 +1,3 @@
-const { Mongoose } = require("mongoose");
-
-
 const Subject = require('../../models/learn/subject');
 
 
